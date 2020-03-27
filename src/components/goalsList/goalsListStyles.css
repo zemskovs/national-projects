@@ -1,0 +1,7 @@
+.list {
+	padding: 12px;
+}
+
+.list .list__header {
+	font-size: larger;
+}

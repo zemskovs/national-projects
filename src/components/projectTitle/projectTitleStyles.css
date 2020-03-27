@@ -1,0 +1,11 @@
+.project-title {
+	display: flex;
+	justify-content: center;
+}
+
+.project-title .project-title__text {
+	display: inline-block;
+	font-size: xx-large;
+	font-weight: 600;
+	text-transform: uppercase;
+}

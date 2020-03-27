@@ -1,0 +1,9 @@
+.deadline {
+	display: flex;
+}
+
+.deadline .deadline__divider {
+	padding: 0 12px;
+	font-size: 30px;
+	align-self: center;
+}

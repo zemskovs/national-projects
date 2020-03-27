@@ -1,0 +1,22 @@
+.dateview {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.dateview .dateview__date {
+	display: flex;
+	flex-direction: column;
+}
+
+.dateview .dateview__date .dateview__date--month {
+	font-size: 24px;
+}
+
+.dateview .dateview__date .dateview__date--day {
+	font-size: 40px;
+}
+
+.dateview .dateview__date .dateview__date--year {
+	font-size: 24px;
+}

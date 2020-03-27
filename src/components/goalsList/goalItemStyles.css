@@ -1,0 +1,7 @@
+.goal-item {
+	display: flex;
+}
+
+.goal-item .goal-item__icon {
+	margin-right: 16px;
+}
