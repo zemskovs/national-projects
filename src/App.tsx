@@ -1,5 +1,8 @@
 
 import * as React from 'react';
+import { Page } from './components/layouts/Page';
+import "@fortawesome/fontawesome-free/css/all.min.css"
+// import "@fortawesome/fontawesome-free/webfonts/"
 
 interface Props {
    name: string
@@ -7,8 +10,7 @@ interface Props {
 
 class App extends React.Component<Props> {
   render() {
-    const { name } = this.props;
-    return <div>Hello {name}</div>;
+    return <Page />;
   }
 }
 
