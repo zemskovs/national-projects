@@ -20,13 +20,13 @@ export const GoalsList: React.FC<GoalsListProps> = props => {
 			<div className="list__header">Цели:</div>
 			<ListGroup variant="flush">
 				{props.goalsList.length ? (
-					props.goalsList.map(goal => {
+					props.goalsList.map((goal, idx) => {
 						const itemProps: any = {};
 						if (goal.success) {
 							itemProps.variant = "success";
 						}
 						return (
-							<ListGroup.Item {...itemProps}>
+							<ListGroup.Item {...itemProps} key={idx}>
 								<GoalItem goalTitle={goal.title} success={goal.success} />
 							</ListGroup.Item>
 						);
