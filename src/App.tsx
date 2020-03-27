@@ -1,31 +1,16 @@
-import * as React from "react";
-import { Deadline } from "./components/deadline/Deadline";
-import { Manager } from "./components/manager/Manager";
-import { GoalsList } from "./components/goalsList/GoalsList";
-import { ProjectTitle } from "./components/projectTitle/ProjectTitle";
+import * as React from 'react';
+import { Page } from './components/layouts/Page';
+import "@fortawesome/fontawesome-free/css/all.min.css"
+// import "@fortawesome/fontawesome-free/webfonts/"
 
-const goals = [
-	{
-		title:
-			"Перестелить дороженое покрытие между Чебоксарами и Новочебоксарском",
-		success: false
-	},
-	{
-		title: "Залатать ямы по улицк калинина",
-		success: true
-	}
-];
+interface Props {
+   name: string
+}
 
-export const App = () => {
-	return (
-		<>
-			<Deadline dateEnd={new Date()} />
-			<Manager
-				fullName="Земсков Александр Петрович"
-				position="Заместитель директора по работе с котиками"
-			/>
-			<GoalsList goalsList={goals} />
-			<ProjectTitle title="Творческие люди" />
-		</>
-	);
-};
+class App extends React.Component<Props> {
+  render() {
+    return <Page />;
+  }
+}
+
+export default App;
