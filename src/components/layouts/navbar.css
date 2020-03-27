@@ -1,0 +1,11 @@
+.navbar__wrap {
+	position: fixed;
+    z-index: 100;
+    width: 100%;
+	border-bottom: 1px solid #e4e5e9;
+}
+
+.navbar .navbar__top {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}

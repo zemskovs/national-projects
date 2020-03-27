@@ -9,20 +9,37 @@ type JumbotronProps = {
 	description?: string;
 };
 
+const firstImg = require("./1.svg");
+
 export const Jumbotron: React.FC<JumbotronProps> = props => {
 	return (
-		<JumbotronBase fluid>
-			<div className="jumbotron__wrap">
-			<Container className="jumbotron_container">
-				<p style={{textAlign: "center", textTransform: "uppercase", fontSize: "1.2em"}}>Цель проекта</p>
-				<h1 className="jumbotron__title">{props.title}</h1>
-				<p className="jumbotron__description">
-					{props.description}
-				</p>
-				<Budget />
-			</Container>
+		<>
+			<JumbotronBase fluid>
+				<div className="jumbotron__wrap">
+					<Container className="jumbotron_container">
+						<p
+							style={{
+								textAlign: "center",
+								textTransform: "uppercase",
+								fontSize: "1.2em"
+							}}
+						>
+							Цель проекта
+						</p>
+						<h1 className="jumbotron__title">{props.title}</h1>
+						<p className="jumbotron__description">
+							{props.description}
+						</p>
+						<Budget />
+					</Container>
+				</div>
+			</JumbotronBase>
+			<div className="jumbotron__divider">
+				<div className="jumbotron__divider-image">
+					<img src={firstImg} className="w-100" />
+				</div>
 			</div>
-		</JumbotronBase>
+		</>
 	);
 };
 Jumbotron.displayName = "Jumbotron";
