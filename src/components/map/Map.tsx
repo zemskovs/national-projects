@@ -2,7 +2,7 @@ import * as React from "react";
 import { Map as LeafletMap, TileLayer, Marker } from "react-leaflet";
 import * as L from "leaflet";
 import { useModal } from "../../hooks/useModal";
-import { MapMoadl } from "../modals/MapModal";
+import { MapMoadlEvent } from "../modals/MapModalEvent";
 
 import "./mapStyles.css";
 
@@ -34,7 +34,9 @@ export const Map: React.FC<MapProps> = props => {
 			<TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
 			{props.data.markers.map((marker, idx) => (
 				<Marker
-					onClick={() => modalService.show(<MapMoadl />)}
+					onClick={() =>
+						modalService.show(<MapMoadlEvent eventId={marker.eventId} />)
+					}
 					icon={icon}
 					key={idx}
 					position={marker.position}

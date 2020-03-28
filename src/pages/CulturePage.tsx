@@ -31,10 +31,7 @@ export const CulturePage: React.FC = props => {
 
 					<Row>
 						<Col md="auto" className="ml-auto">
-							<Deadline
-								dateEnd={new Date()}
-								dateStart={new Date()}
-							/>
+							<Deadline dateEnd={new Date()} dateStart={new Date()} />
 						</Col>
 					</Row>
 				</Container>
@@ -43,7 +40,9 @@ export const CulturePage: React.FC = props => {
 			<Section>
 				<Container>
 					<Row>
-						<Col>Карта</Col>
+						<Col>
+							<Map data={dataForMap} />
+						</Col>
 					</Row>
 				</Container>
 			</Section>
