@@ -13,12 +13,20 @@ export const Navbar: React.FC = props => {
 				<NavbarBase.Brand href="/" className="navbar__top">
 					<img
 						src={logo}
-						width="30"
 						height="30"
 						className="d-inline-block align-top w-100"
 						alt="Национальные проекты Чувашии"
 					/>
 				</NavbarBase.Brand>
+				{/* <NavbarBase.Toggle />
+				<NavbarBase.Collapse>
+					<Nav
+						className="justify-content-end"
+						style={{ width: "100%" }}
+					>
+						<p>jj</p>
+					</Nav>
+				</NavbarBase.Collapse> */}
 			</NavbarBase>
 		</div>
 	);
