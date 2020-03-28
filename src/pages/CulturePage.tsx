@@ -11,6 +11,7 @@ import { Projects } from "../components/projects/Projects";
 import { Section } from "../components/section/Section";
 import { Reactions } from "../components/reactions/Reactions";
 import { Menu } from "../components/menu/Menu";
+import { News, news } from "../components/news/News";
 
 export const CulturePage: React.FC = props => {
 	return (
@@ -21,12 +22,6 @@ export const CulturePage: React.FC = props => {
 				description="Увелечение количества граждан, вовлеченных в культурную деятельность путем поддержки "
 			/>
 			<Section secondary>
-				{/* <div style={{position: "absolute", left: 0, top: 0}}>
-					<Manager
-						fullName="Лизакова Роза Михайловна"
-						position="Министр культуры, по делам национальностей и архивного дела Чувашской Республики"
-					/>
-				</div> */}
 				<Container>
 					<Projects />
 
@@ -51,17 +46,22 @@ export const CulturePage: React.FC = props => {
 			<Section secondary>
 				<Container>
 					<Row>
-						<Col>Новости</Col>
+						<Col>
+							<News
+								news={news}
+								allNewsLink="http://culture.cap.ru/news?type=news&action=bab1af34-684b-4b51-8899-8a8f54b5289d"
+							/>
+						</Col>
 					</Row>
 				</Container>
 			</Section>
-			<Section>
+			{/* <Section>
 				<Container>
 					<Row>
 						<Col>Отзывы</Col>
 					</Row>
 				</Container>
-			</Section>
+			</Section> */}
 			<Section>
 				<Container>
 					<Row>

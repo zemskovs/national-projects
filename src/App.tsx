@@ -1,15 +1,16 @@
-import * as React from 'react';
-import { CulturePage } from './pages/CulturePage';
+import * as React from "react";
+import { CulturePage } from "./pages/CulturePage";
+import "./main.css";
 // import "@fortawesome/fontawesome-free/webfonts/"
 
 interface Props {
-   name: string
+	name: string;
 }
 
 class App extends React.Component<Props> {
-  render() {
-    return <CulturePage />;
-  }
+	render() {
+		return <CulturePage />;
+	}
 }
 
 export default App;
