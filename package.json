@@ -27,7 +27,8 @@
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.6.3",
-    "react-reactions": "^0.1.3"
+    "react-reactions": "github:casesandberg/react-reactions#pull/3/head",
+    "react-toastify": "^5.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

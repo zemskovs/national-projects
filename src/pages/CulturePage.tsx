@@ -11,6 +11,7 @@ import "./culturePageStyles.css";
 import { dataForMap } from "../helpers/helpers";
 import { Projects } from "../components/projects/Projects";
 import { Section } from "../components/section/Section";
+import { Reactions } from "../components/reactions/Reactions";
 
 export const CulturePage: React.FC = props => {
 	return (
@@ -43,7 +44,9 @@ export const CulturePage: React.FC = props => {
 			<Section>
 				<Container>
 					<Row>
-						<Col>Карта</Col>
+						<Col>
+							<Map data={dataForMap}/>
+						</Col>
 					</Row>
 				</Container>
 			</Section>
@@ -55,11 +58,17 @@ export const CulturePage: React.FC = props => {
 					</Row>
 				</Container>
 			</Section>
-
 			<Section>
 				<Container>
 					<Row>
-						<Col>Реакции</Col>
+						<Col>Отзывы</Col>
+					</Row>
+				</Container>
+			</Section>
+			<Section>
+				<Container>
+					<Row>
+						<Col><Reactions /></Col>
 					</Row>
 				</Container>
 			</Section>
