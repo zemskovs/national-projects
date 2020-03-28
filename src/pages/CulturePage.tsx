@@ -12,6 +12,7 @@ import { dataForMap } from "../helpers/helpers";
 import { Projects } from "../components/projects/Projects";
 import { Section } from "../components/section/Section";
 import { Reactions } from "../components/reactions/Reactions";
+import { News } from "../components/news/News";
 
 export const CulturePage: React.FC = props => {
 	return (
@@ -21,12 +22,6 @@ export const CulturePage: React.FC = props => {
 				description="Увелечение количества граждан, вовлеченных в культурную деятельность путем поддержки "
 			/>
 			<Section secondary>
-				{/* <div style={{position: "absolute", left: 0, top: 0}}>
-					<Manager
-						fullName="Лизакова Роза Михайловна"
-						position="Министр культуры, по делам национальностей и архивного дела Чувашской Республики"
-					/>
-				</div> */}
 				<Container>
 					<Projects />
 
@@ -54,7 +49,7 @@ export const CulturePage: React.FC = props => {
 			<Section secondary>
 				<Container>
 					<Row>
-						<Col>Новости</Col>
+						<Col><News /></Col>
 					</Row>
 				</Container>
 			</Section>
