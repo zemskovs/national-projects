@@ -10,15 +10,9 @@ export type MapProps = {
 	data: any;
 };
 
-const iconA = require("./books.svg");
-
 export const Map: React.FC<MapProps> = props => {
 	const modalService = useModal();
 	const center = props.data.center;
-	const icon = L.icon({
-		iconUrl: iconA,
-		iconSize: [25, 25]
-	});
 	return (
 		<LeafletMap
 			center={center}
@@ -37,7 +31,6 @@ export const Map: React.FC<MapProps> = props => {
 					onClick={() =>
 						modalService.show(<MapMoadlEvent eventId={marker.eventId} />)
 					}
-					icon={icon}
 					key={idx}
 					position={marker.position}
 				></Marker>
