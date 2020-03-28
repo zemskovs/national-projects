@@ -27,9 +27,11 @@
     "react-bootstrap": "^1.0.0",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
+    "react-id-swiper": "^3.0.0",
     "react-leaflet": "^2.6.3",
     "react-reactions": "github:casesandberg/react-reactions#pull/3/head",
-    "react-toastify": "^5.5.0"
+    "react-toastify": "^5.5.0",
+    "swiper": "^5.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

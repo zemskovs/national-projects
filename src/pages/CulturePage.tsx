@@ -12,7 +12,7 @@ import { dataForMap } from "../helpers/helpers";
 import { Projects } from "../components/projects/Projects";
 import { Section } from "../components/section/Section";
 import { Reactions } from "../components/reactions/Reactions";
-import { News } from "../components/news/News";
+import { News, news } from "../components/news/News";
 
 export const CulturePage: React.FC = props => {
 	return (
@@ -49,17 +49,22 @@ export const CulturePage: React.FC = props => {
 			<Section secondary>
 				<Container>
 					<Row>
-						<Col><News /></Col>
+						<Col>
+							<News
+								news={news}
+								allNewsLink="http://culture.cap.ru/news?type=news&action=bab1af34-684b-4b51-8899-8a8f54b5289d"
+							/>
+						</Col>
 					</Row>
 				</Container>
 			</Section>
-			<Section>
+			{/* <Section>
 				<Container>
 					<Row>
 						<Col>Отзывы</Col>
 					</Row>
 				</Container>
-			</Section>
+			</Section> */}
 			<Section>
 				<Container>
 					<Row>
