@@ -5,3 +5,7 @@
 	color: #ffffff;
 	width: 70%;
 }
+
+.project__list-element {
+	cursor: pointer;
+}
