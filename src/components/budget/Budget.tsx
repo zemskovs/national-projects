@@ -1,25 +1,26 @@
 import * as React from "react";
 import { Doughnut } from "react-chartjs-2";
 import "./budgetStyles.css";
+import { t } from "../../services/TextService";
 
-type BudgetProps = {
-	planFed: number;
-	planReg: number;
+export type BudgetProps = {
+	fed: number;
+	reg: number;
+	other: number;
 };
 
-const data = {
-	labels: ["Red", "Green", "Yellow"],
-	datasets: [
-		{
-			data: [300, 50, 100],
-			backgroundColor: ["#BFEDFF", "#9FE4FF", "#7FDCFF"],
-			hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
-		}
-	]
-};
 
-export const Budget: React.FC = props => {
-	const chartRef = React.useRef();
+export const Budget: React.FC<BudgetProps> = props => {
+	const data = {
+		labels: [t("Федеральный"), t("Региональный"), t("Прочий")],
+		datasets: [
+			{
+				data: [props.fed || 0, props.reg || 0, props.other || 0],
+				backgroundColor: ["#BFEDFF", "#9FE4FF", "#7FDCFF"],
+				hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+			}
+		]
+	};
 
 	const drawInnerText = (chart: any) => {
 		const width = chart.chart.width,
@@ -64,11 +65,10 @@ export const Budget: React.FC = props => {
 					},
 					centerText: {
 						display: true,
-						text: `627 млн` //todo from props
+						text: `${props.reg + props.fed + props.other} млн`
 					},
 					cutoutPercentage: 70,
 					rotation: 2 * Math.PI,
-
 					maintainAspectRatio: false
 				}}
 			/>

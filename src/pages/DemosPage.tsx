@@ -8,16 +8,16 @@ import { Deadline } from "../components/deadline/Deadline";
 import { dataForMap } from "../helpers/helpers";
 import { News, news } from "../components/news/News";
 import { Reactions } from "../components/reactions/Reactions";
-import { Map } from "../components/map/Map"
+import { Map } from "../components/map/Map";
 import { Jumbotron } from "../components/jumbotron/Jumbotron";
 
 export const DemosPage: React.FC = props => {
 	return (
 		<>
-			<Menu />
 			<Jumbotron
 				title="Демография"
-				description="Увелечение количества граждан, вовлеченных в культурную деятельность путем поддержки"
+				description="Увеличение ожидаемой продолжительности здоровой жизни до 67 лет; снижение смертности населения старше трудоспособного возраста, увеличение суммарной рождаемости."
+				budget={{reg: 10, fed: 5, other: 3}}
 			/>
 			<Section secondary>
 				<Container>

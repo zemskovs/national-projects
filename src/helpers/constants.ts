@@ -12,7 +12,12 @@ export const nationalProjects: NationalProjectsType[] = [
 		url: "/"
 	},
 	{
-		title: t("Демографи"),
+		title: t("Демография"),
 		url: "/demos"
+	},
+	{
+		title: t("Образование"),
+		url: "/education"
+
 	}
 ];
