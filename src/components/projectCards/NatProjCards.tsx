@@ -8,7 +8,7 @@ export const NatProjCards: React.FC = props => {
 	return (
 		<div className="projects-cards">
 			{nationalProjectsData.map((project, idx) => {
-				return <ProjectCard project={project} />;
+				return <ProjectCard key={idx} project={project} />;
 			})}
 		</div>
 	);

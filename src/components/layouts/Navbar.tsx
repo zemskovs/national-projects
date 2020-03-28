@@ -3,12 +3,13 @@ import NavbarBase from "react-bootstrap/Navbar";
 import "./navbar.css";
 import { Form, FormControl, Button, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faGlasses } from "@fortawesome/free-solid-svg-icons";
 import { t } from "../../services/TextService";
 
 type NavbarProps = {};
 
 const logo = require("./logo.svg");
+const chuvFlag = require("../../assets/chuvflag.png");
 
 export const Navbar: React.FC = props => {
 	return (
@@ -32,6 +33,15 @@ export const Navbar: React.FC = props => {
 						<FontAwesomeIcon icon={faSearch} />
 					</Button>
 				</Form>
+				<Nav.Link
+					style={{ fontSize: "2rem", marginLeft: "8px" }}
+					href="#visually_impaired"
+				>
+					<FontAwesomeIcon icon={faGlasses} />
+				</Nav.Link>
+				<Nav.Link href="#chuv_language">
+					<img src={chuvFlag} height="32" />
+				</Nav.Link>
 			</NavbarBase>
 		</div>
 	);
