@@ -11,18 +11,16 @@ export type DeadlineProps = {
 export const Deadline: React.FC<DeadlineProps> = props => {
 	return (
 		<div className="deadline">
-			<div className="dedline__start">
-				<Card className="text-center">
-					<Card.Header>Начало</Card.Header>
+			<div className="deadline__start">
+				<Card className="text-center deadline_card">
 					<Card.Body>
 						<DateView date={props.dateEnd} />
 					</Card.Body>
 				</Card>
 			</div>
 			<div className="deadline__divider">-</div>
-			<div className="dedline__end">
-				<Card className="text-center">
-					<Card.Header>Конец</Card.Header>
+			<div className="deadline__end">
+				<Card className="text-center deadline_card">
 					<Card.Body>
 						<DateView date={props.dateEnd} />
 					</Card.Body>

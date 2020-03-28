@@ -1,7 +1,16 @@
 .dateview {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
+}
+
+.dateview__row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .dateview .dateview__date {
@@ -10,13 +19,14 @@
 }
 
 .dateview .dateview__date .dateview__date--month {
-	font-size: 24px;
+	font-size: 1em;
 }
 
 .dateview .dateview__date .dateview__date--day {
-	font-size: 40px;
+	font-size: 1em;
+	margin-right: 2px;
 }
 
 .dateview .dateview__date .dateview__date--year {
-	font-size: 24px;
+	font-size: 1em;
 }

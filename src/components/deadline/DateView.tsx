@@ -15,8 +15,10 @@ export const DateView: React.FC<DateViewProps> = props => {
 	return (
 		<div className="dateview">
 			<div className="dateview__date">
-				<div className="dateview__date--month">{month}</div>
-				<div className="dateview__date--day">{day}</div>
+				<div className="dateview__row">
+					<div className="dateview__date--day">{day}</div>
+					<div className="dateview__date--month">{month}</div>
+				</div>
 				<div className="dateview__date--year">{year}</div>
 			</div>
 		</div>

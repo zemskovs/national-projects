@@ -6,4 +6,11 @@
 	padding: 0 12px;
 	font-size: 30px;
 	align-self: center;
+	color: #ffffff;
+}
+
+.deadline .deadline_card {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
 }
