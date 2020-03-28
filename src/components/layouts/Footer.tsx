@@ -1,6 +1,8 @@
 import * as React from "react";
 import "./footer.css";
 import { nationalProjects } from "../../helpers/constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faVk, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export const Footer: React.FC = props => {
 	return (
@@ -27,9 +29,7 @@ export const Footer: React.FC = props => {
 
 					<div className="col-xs-6 col-md-3">
 						<h6>Списки</h6>
-						<ul className="footer-links">
-								Добавить ссылок
-						</ul>
+						<ul className="footer-links">Добавить ссылок</ul>
 					</div>
 				</div>
 				<hr />
@@ -37,24 +37,21 @@ export const Footer: React.FC = props => {
 			<div className="container">
 				<div className="row">
 					<div className="col-md-8 col-sm-6 col-xs-12">
-						<p className="copyright-text">
-							Копирайт
-						</p>
+						<p className="copyright-text">Копирайт</p>
 					</div>
 
 					<div className="col-md-4 col-sm-6 col-xs-12">
 						<ul className="social-icons">
 							<li>
-								<a className="facebook" href="#">
-									<i className="fa fa-facebook"></i>
+								<a className="vk" href="#">
+									<FontAwesomeIcon icon={faVk} />
 								</a>
 							</li>
 							<li>
-								<a className="twitter" href="#">
-									<i className="fa fa-twitter"></i>
+								<a className="instagram" href="#">
+									<FontAwesomeIcon icon={faInstagram} />
 								</a>
 							</li>
-
 						</ul>
 					</div>
 				</div>
