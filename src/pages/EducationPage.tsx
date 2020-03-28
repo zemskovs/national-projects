@@ -1,25 +1,21 @@
 import * as React from "react";
-import { Page } from "../components/layouts/Page";
-import { Jumbotron } from "../components/jumbotron/Jumbotron";
 import { Container, Row, Col } from "react-bootstrap";
-import { Deadline } from "../components/deadline/Deadline";
-import { Map } from "../components/map/Map";
-
-import "./culturePageStyles.css";
-import { dataForMap } from "../helpers/helpers";
-import { Projects } from "../components/projects/Projects";
 import { Section } from "../components/section/Section";
-import { Reactions } from "../components/reactions/Reactions";
-import { Menu } from "../components/menu/Menu";
+import { Projects } from "../components/projects/Projects";
+import { Deadline } from "../components/deadline/Deadline";
+import { dataForMap } from "../helpers/helpers";
 import { News, news } from "../components/news/News";
+import { Reactions } from "../components/reactions/Reactions";
+import { Map } from "../components/map/Map";
+import { Jumbotron } from "../components/jumbotron/Jumbotron";
 
-export const CulturePage: React.FC = props => {
+export const EducationPage: React.FC = () => {
 	return (
 		<>
 			<Jumbotron
-				title="Культура"
-				description="Увелечение количества граждан, вовлеченных в культурную деятельность"
-				budget={{ reg: 10, fed: 20, other: 2 }}
+				title="Образование"
+				description="Обеспечение глобальной конкурентоспособности российского образования, вхождение Российской Федерации в число 10 ведущих стран мира по качеству общего образования, и воспитание гармонично развитой и социально ответственной личности."
+				budget={{ reg: 30, fed: 5, other: 3 }}
 			/>
 			<Section secondary>
 				<Container>
