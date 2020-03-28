@@ -1,0 +1,12 @@
+.main-page__jumbo {
+	height: 60vh;
+	background-image: url("../assets/zaliv2.jpg");
+	background-position: top;
+	background-size: cover;
+}
+
+.main-page__welcome .title {
+	margin-top: -160px;
+	text-shadow: 1px 1px 1px black;
+	color: #ffffff;
+}

@@ -13,16 +13,35 @@ import { Menu } from "../components/menu/Menu";
 import { News, news } from "../components/news/News";
 import { t } from "../services/TextService";
 
+import "./mainPageStyles.css";
+import { NatProjCards } from "../components/projectCards/NatProjCards";
+
 export const MainPage: React.FC = props => {
 	return (
 		<>
-			<Jumbotron fluid>
+			<Jumbotron className="main-page__jumbo" fluid>
 				<Container>
 					<Row>
-						<Col></Col>
+						<Col>
+							<div className="main-page__welcome">
+								<h1 className="title">
+									Рады приветствовать вас на портале национальных проектов
+									Чувашии
+								</h1>
+							</div>
+						</Col>
 					</Row>
 				</Container>
 			</Jumbotron>
+			<Container>
+				<Section title="Национальные проекты">
+					<Row>
+						<Col>
+							<NatProjCards />
+						</Col>
+					</Row>
+				</Section>
+			</Container>
 		</>
 	);
 };

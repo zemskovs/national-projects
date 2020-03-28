@@ -10,6 +10,7 @@ type NavbarProps = {};
 
 const logo = require("./logo.svg");
 const chuvFlag = require("../../assets/chuvflag.png");
+const gerb = require("../../assets/gerb2.png");
 
 export const Navbar: React.FC = props => {
 	return (
