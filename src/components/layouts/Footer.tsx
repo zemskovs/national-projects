@@ -3,6 +3,7 @@ import "./footer.css";
 import { nationalProjects } from "../../helpers/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVk, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 export const Footer: React.FC = props => {
 	return (
@@ -21,7 +22,7 @@ export const Footer: React.FC = props => {
 						<ul className="footer-links">
 							{nationalProjects.map(p => (
 								<li key={p.title}>
-									<a href={p.url}>{p.title}</a>
+									<Link to={p.url}>{p.title}</Link>
 								</li>
 							))}
 						</ul>

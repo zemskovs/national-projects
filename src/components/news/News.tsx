@@ -83,6 +83,11 @@ export const News: React.FC<NewsProps> = props => {
 						Все новости
 					</a>
 				</Col>
+				<Col className="news_allnews text-right">
+					<a href={props.allNewsLink} target="_blank">
+						Подписаться на новости
+					</a>
+				</Col>
 			</Row>
 		</div>
 	);
