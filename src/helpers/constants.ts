@@ -9,6 +9,10 @@ type NationalProjectsType = {
 export const nationalProjects: NationalProjectsType[] = [
 	{
 		title: t("Культура"),
-		url: "#"
+		url: "/"
+	},
+	{
+		title: t("Демографи"),
+		url: "/demos"
 	}
 ];
