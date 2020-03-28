@@ -5,8 +5,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import { GoalsList } from "../components/goalsList/GoalsList";
 import { Deadline } from "../components/deadline/Deadline";
 import { Manager } from "../components/manager/Manager";
+import { Map } from "../components/map/Map";
 
 import "./culturePageStyles.css";
+import { dataForMap } from "../helpers/helpers";
 
 export const CulturePage: React.FC = props => {
 	return (
@@ -32,6 +34,11 @@ export const CulturePage: React.FC = props => {
 								{ title: "Не вау", success: false }
 							]}
 						/>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<Map data={dataForMap} />
 					</Col>
 				</Row>
 			</Container>
