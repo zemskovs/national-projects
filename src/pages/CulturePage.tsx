@@ -7,6 +7,8 @@ import { Deadline } from "../components/deadline/Deadline";
 import { Manager } from "../components/manager/Manager";
 
 import "./culturePageStyles.css";
+import { Section } from "../components/section/Section";
+import { Projects } from "../components/projects/Projects";
 
 export const CulturePage: React.FC = props => {
 	return (
@@ -15,26 +17,50 @@ export const CulturePage: React.FC = props => {
 				title="Культура"
 				description="Увелечение количества граждан, вовлеченных в культурную деятельность путем поддержки "
 			/>
-			<Container>
-				<Row>
-					<Col sm="auto" className="manager-col">
-						<Manager fullName="Александр Елахов" position="руководитель" />
-					</Col>
-					<Col md="auto">
-						<Deadline dateEnd={new Date()} dateStart={new Date()} />
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<GoalsList
-							goalsList={[
-								{ title: "Вау", success: true },
-								{ title: "Не вау", success: false }
-							]}
-						/>
-					</Col>
-				</Row>
-			</Container>
+			<Section secondary>
+				{/* <div style={{position: "absolute", left: 0, top: 0}}>
+					<Manager
+						fullName="Лизакова Роза Михайловна"
+						position="Министр культуры, по делам национальностей и архивного дела Чувашской Республики"
+					/>
+				</div> */}
+				<Container>
+					<Projects />
+
+					<Row>
+						<Col md="auto" className="ml-auto">
+							<Deadline
+								dateEnd={new Date()}
+								dateStart={new Date()}
+							/>
+						</Col>
+					</Row>
+				</Container>
+			</Section>
+
+			<Section>
+				<Container>
+					<Row>
+						<Col>Карта</Col>
+					</Row>
+				</Container>
+			</Section>
+
+			<Section secondary>
+				<Container>
+					<Row>
+						<Col>Новости</Col>
+					</Row>
+				</Container>
+			</Section>
+
+			<Section>
+				<Container>
+					<Row>
+						<Col>Реакции</Col>
+					</Row>
+				</Container>
+			</Section>
 		</Page>
 	);
 };
