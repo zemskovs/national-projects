@@ -1,0 +1,14 @@
+.reactions {
+	height: 80px;
+}
+
+.reaction__emoji {
+	font-size: 30px;
+	cursor: pointer;
+	width: 80px;
+	line-height: 100%;
+}
+
+.reaction__emoji:hover {
+	font-size: calc(30px * 1.3);
+}
