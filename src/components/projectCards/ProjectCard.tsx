@@ -9,11 +9,12 @@ import {
 import { t } from "../../services/TextService";
 
 import "./projectCardStyles.css";
+import { Link } from "react-router-dom";
 
 export enum ProjectCodes {
 	roads = "roads",
 	culture = "culture",
-	digital = "digital"
+	demos = "demos"
 }
 
 export type Project = {
@@ -25,31 +26,34 @@ export type Project = {
 
 export type ProjectCardProps = {
 	project: Project;
+	onClick: () => void;
 };
 
 const iconProjectsMap = {
 	[ProjectCodes.roads]: require("../../assets/roads.png"),
 	[ProjectCodes.culture]: require("../../assets/culture.png"),
-	[ProjectCodes.digital]: require("../../assets/digital.png")
+	[ProjectCodes.demos]: require("../../assets/digital.png")
 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = props => {
 	const icon = iconProjectsMap[props.project.code];
 	return (
-		<div className="project-card">
-			<div className="icon">
-				<img src={icon} height="60" />
+		<Link onClick={() => props.onClick()} to={`/${props.project.code}`}>
+			<div className="project-card">
+				<div className="icon">
+					<img src={icon} height="60" />
+				</div>
+				<div className="project-card__info">
+					<span className="textproj-title">{props.project.title}</span>
+					<span className="childrens">{`${t("Региональных проектов")}: ${
+						props.project.childrens
+					}`}</span>
+				</div>
+				<div className="project-card__budget">
+					<span className="digit">{props.project.budget}</span>
+					<span className="type">млн</span>
+				</div>
 			</div>
-			<div className="project-card__info">
-				<span className="textproj-title">{props.project.title}</span>
-				<span className="childrens">{`${t("Региональных проектов")}: ${
-					props.project.childrens
-				}`}</span>
-			</div>
-			<div className="project-card__budget">
-				<span className="digit">{props.project.budget}</span>
-				<span className="type">млн</span>
-			</div>
-		</div>
+		</Link>
 	);
 };

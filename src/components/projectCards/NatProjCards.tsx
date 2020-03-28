@@ -4,11 +4,17 @@ import { nationalProjectsData } from "../../helpers/helpers";
 
 import "./natProjCardsStyles.css";
 
-export const NatProjCards: React.FC = props => {
+export type NatProjCardsProps = {
+	onClick: () => void;
+};
+
+export const NatProjCards: React.FC<NatProjCardsProps> = props => {
 	return (
 		<div className="projects-cards">
 			{nationalProjectsData.map((project, idx) => {
-				return <ProjectCard key={idx} project={project} />;
+				return (
+					<ProjectCard onClick={props.onClick} key={idx} project={project} />
+				);
 			})}
 		</div>
 	);

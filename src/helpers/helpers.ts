@@ -72,7 +72,7 @@ export const nationalProjectsData: Project[] = [
 		childrens: 3
 	},
 	{
-		code: ProjectCodes.digital,
+		code: ProjectCodes.demos,
 		title: "Цифровая экономика",
 		budget: 15.5,
 		childrens: 5
