@@ -5,7 +5,6 @@ import { Form, FormControl, Button, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { t } from "../../services/TextService";
-import { Menu } from "../menu/Menu";
 
 type NavbarProps = {};
 
