@@ -1,0 +1,3 @@
+[class^="event-info__"]:not(:last-child) {
+	margin-bottom: 12px;
+}

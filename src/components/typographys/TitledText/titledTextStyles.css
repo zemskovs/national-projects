@@ -1,0 +1,9 @@
+.titled-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.titled-text .title {
+	font-size: 14px;
+	font-weight: bold;
+}

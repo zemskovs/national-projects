@@ -45,7 +45,7 @@ export const CulturePage: React.FC = props => {
 				<Container>
 					<Row>
 						<Col>
-							<Map data={dataForMap}/>
+							<Map data={dataForMap} />
 						</Col>
 					</Row>
 				</Container>
@@ -68,7 +68,9 @@ export const CulturePage: React.FC = props => {
 			<Section>
 				<Container>
 					<Row>
-						<Col><Reactions /></Col>
+						<Col>
+							<Reactions />
+						</Col>
 					</Row>
 				</Container>
 			</Section>
