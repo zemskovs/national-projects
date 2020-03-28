@@ -1,4 +1,9 @@
 import { t } from "../services/TextService";
+import {
+	ProjectCard,
+	Project,
+	ProjectCodes
+} from "../components/projectCards/ProjectCard";
 
 export const getMonthAsWord = (month: number): string => {
 	const map = [
@@ -50,5 +55,26 @@ export const events = [
 		result: "Завершено",
 		address: "Канашский район, с. Шихазаны, ул. Гагарина, д.25",
 		date: new Date()
+	}
+];
+
+export const nationalProjectsData: Project[] = [
+	{
+		code: ProjectCodes.roads,
+		title: "Безопасные и качественные автомобильные дороги",
+		budget: 400,
+		childrens: 3
+	},
+	{
+		code: ProjectCodes.culture,
+		title: "Культура",
+		budget: 50.2,
+		childrens: 3
+	},
+	{
+		code: ProjectCodes.digital,
+		title: "Цифровая экономика",
+		budget: 15.5,
+		childrens: 5
 	}
 ];

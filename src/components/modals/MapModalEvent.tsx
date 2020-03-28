@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Modal, Button, Card } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import { events } from "../../helpers/helpers";
 import { TitledText } from "../typographys/TitledText/TitledText";
 
@@ -15,7 +15,7 @@ export const MapMoadlEvent: React.FC<MapMoadlEventProps> = props => {
 	return (
 		<Modal show={show} onHide={() => setShow(false)} centered>
 			<Modal.Header closeButton>
-				<Modal.Title>{event.project}</Modal.Title>
+				<Modal.Title style={{ lineHeight: 1.2 }}>{event.project}</Modal.Title>
 			</Modal.Header>
 
 			<Modal.Body>

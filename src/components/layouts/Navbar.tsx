@@ -5,6 +5,7 @@ import { Form, FormControl, Button, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { t } from "../../services/TextService";
+import { Menu } from "../menu/Menu";
 
 type NavbarProps = {};
 
@@ -22,19 +23,16 @@ export const Navbar: React.FC = props => {
 						alt="Национальные проекты Чувашии"
 					/>
 				</NavbarBase.Brand>
-				<NavbarBase.Toggle aria-controls="basic-navbar-nav" />
-				<NavbarBase.Collapse id="basic-navbar-nav">
-					<Form inline>
-						<FormControl type="text" placeholder={t("Поиск")} />
-						<Button variant="outline-primary">
-							<FontAwesomeIcon icon={faSearch} />
-						</Button>
-					</Form>
-					<Nav className="justify-content-end" style={{ width: "100%" }}>
-						<Nav.Link href="#home">Home</Nav.Link>
-						<Nav.Link href="#link">Link</Nav.Link>
-					</Nav>
-				</NavbarBase.Collapse>
+				<Form inline>
+					<FormControl
+						type="text"
+						className="mr-sm-2"
+						placeholder={t("Поиск")}
+					/>
+					<Button variant="outline-primary">
+						<FontAwesomeIcon icon={faSearch} />
+					</Button>
+				</Form>
 			</NavbarBase>
 		</div>
 	);

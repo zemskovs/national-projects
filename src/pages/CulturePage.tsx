@@ -2,9 +2,7 @@ import * as React from "react";
 import { Page } from "../components/layouts/Page";
 import { Jumbotron } from "../components/jumbotron/Jumbotron";
 import { Container, Row, Col } from "react-bootstrap";
-import { GoalsList } from "../components/goalsList/GoalsList";
 import { Deadline } from "../components/deadline/Deadline";
-import { Manager } from "../components/manager/Manager";
 import { Map } from "../components/map/Map";
 
 import "./culturePageStyles.css";
@@ -12,10 +10,12 @@ import { dataForMap } from "../helpers/helpers";
 import { Projects } from "../components/projects/Projects";
 import { Section } from "../components/section/Section";
 import { Reactions } from "../components/reactions/Reactions";
+import { Menu } from "../components/menu/Menu";
 
 export const CulturePage: React.FC = props => {
 	return (
 		<Page>
+			<Menu />
 			<Jumbotron
 				title="Культура"
 				description="Увелечение количества граждан, вовлеченных в культурную деятельность путем поддержки "
@@ -32,10 +32,7 @@ export const CulturePage: React.FC = props => {
 
 					<Row>
 						<Col md="auto" className="ml-auto">
-							<Deadline
-								dateEnd={new Date()}
-								dateStart={new Date()}
-							/>
+							<Deadline dateEnd={new Date()} dateStart={new Date()} />
 						</Col>
 					</Row>
 				</Container>
