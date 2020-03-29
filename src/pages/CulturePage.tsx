@@ -48,7 +48,7 @@ export const CulturePage: React.FC = props => {
 					<Row>
 						<Col>
 							<h3 className="text-center pt-5 pb-3 text-uppercase">
-								Ход выполнениея задач по региональным проектам
+								Ход выполнения задач по региональным проектам
 							</h3>
 							<GoalsList goalsList={goalsList} />
 						</Col>
