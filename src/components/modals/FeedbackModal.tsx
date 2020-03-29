@@ -23,7 +23,10 @@ export const FeedbackModal: React.FC = props => {
 						<Form.Control as="textarea" rows="3" />
 					</Form.Group>
 					<Button
-						onClick={() => setShow(false)}
+						onClick={e => {
+							e.preventDefault();
+							setShow(false);
+						}}
 						variant="primary"
 						type="submit"
 					>
