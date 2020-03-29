@@ -7,12 +7,10 @@ import { Page } from "./components/layouts/Page";
 import { Menu } from "./components/menu/Menu";
 import { MainPage } from "./pages/MainPage";
 import { EducationPage } from "./pages/EducationPage";
+import "bootstrap/dist/css/bootstrap.min.css"
 
-interface Props {
-	name: string;
-}
 
-class App extends React.Component<Props> {
+class App extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>
