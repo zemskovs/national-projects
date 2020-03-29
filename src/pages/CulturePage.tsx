@@ -6,12 +6,13 @@ import { Deadline } from "../components/deadline/Deadline";
 import { Map } from "../components/map/Map";
 
 import "./culturePageStyles.css";
-import { dataForMap } from "../helpers/helpers";
+import { dataForMap, goalsList } from "../helpers/helpers";
 import { Projects } from "../components/projects/Projects";
 import { Section } from "../components/section/Section";
 import { Reactions } from "../components/reactions/Reactions";
 import { Menu } from "../components/menu/Menu";
 import { News, news } from "../components/news/News";
+import { GoalsList } from "../components/goalsList/GoalsList";
 
 export const CulturePage: React.FC = props => {
 	return (
@@ -21,8 +22,8 @@ export const CulturePage: React.FC = props => {
 				description="Увеличение посещений организаций культуры, создание условий для творческой реализации граждан, увеличение числа обращений к цифровым ресурсам в сфере культуры."
 				budget={{ reg: 10, fed: 20, other: 2 }}
 			/>
-			<Container>
-				<Section secondary>
+			<Section secondary>
+				<Container>
 					<Projects />
 
 					<Row>
@@ -30,14 +31,26 @@ export const CulturePage: React.FC = props => {
 							<Deadline dateEnd={new Date()} dateStart={new Date()} />
 						</Col>
 					</Row>
-				</Section>
-			</Container>
-
+				</Container>
+			</Section>
 			<Section>
 				<Container>
 					<Row>
 						<Col>
 							<Map data={dataForMap} />
+						</Col>
+					</Row>
+				</Container>
+			</Section>
+			<hr />
+			<Section>
+				<Container>
+					<Row>
+						<Col>
+							<h3 className="text-center pt-5 pb-3 text-uppercase">
+								Ход выполнениея задач по региональным проектам
+							</h3>
+							<GoalsList goalsList={goalsList} />
 						</Col>
 					</Row>
 				</Container>
@@ -66,7 +79,7 @@ export const CulturePage: React.FC = props => {
 					<Row>
 						<Col>
 							<h3 className="text-center pt-5 pb-3 text-uppercase">
-								Ваша оценка
+								Ваша оценка нашей деятельности
 							</h3>
 							<Reactions />
 						</Col>

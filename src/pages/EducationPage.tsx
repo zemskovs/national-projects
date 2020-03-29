@@ -3,11 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Section } from "../components/section/Section";
 import { Projects } from "../components/projects/Projects";
 import { Deadline } from "../components/deadline/Deadline";
-import { dataForMap } from "../helpers/helpers";
+import { dataForMap, goalsList } from "../helpers/helpers";
 import { News, news } from "../components/news/News";
 import { Reactions } from "../components/reactions/Reactions";
 import { Map } from "../components/map/Map";
 import { Jumbotron } from "../components/jumbotron/Jumbotron";
+import { GoalsList } from "../components/goalsList/GoalsList";
 
 export const EducationPage: React.FC = () => {
 	return (
@@ -38,7 +39,19 @@ export const EducationPage: React.FC = () => {
 					</Row>
 				</Container>
 			</Section>
-
+			<hr />
+			<Section>
+				<Container>
+					<Row>
+						<Col>
+							<h3 className="text-center pt-5 pb-3 text-uppercase">
+								Ход выполнениея задач по региональным проектам
+							</h3>
+							<GoalsList goalsList={goalsList} />
+						</Col>
+					</Row>
+				</Container>
+			</Section>
 			<Section secondary>
 				<Container>
 					<Row>
@@ -62,7 +75,7 @@ export const EducationPage: React.FC = () => {
 					<Row>
 						<Col>
 							<h3 className="text-center pt-5 pb-3 text-uppercase">
-								Ваша оценка
+								Ваша оценка нашей деятельности
 							</h3>
 							<Reactions />
 						</Col>

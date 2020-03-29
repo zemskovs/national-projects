@@ -4,7 +4,7 @@ import { ListGroup } from "react-bootstrap";
 import "./goalsListStyles.css";
 import { GoalItem } from "./GoalItem";
 
-type GoalItem = {
+export type GoalItem = {
 	title: string;
 	success: boolean;
 };
@@ -17,8 +17,8 @@ export const GoalsList: React.FC<GoalsListProps> = props => {
 	const listGroupProps = {};
 	return (
 		<div className="list">
-			<div className="list__header">Цели:</div>
-			<ListGroup variant="flush">
+			<div className="list__header">Задачи:</div>
+			<ListGroup>
 				{props.goalsList.length ? (
 					props.goalsList.map((goal, idx) => {
 						const itemProps: any = {};
@@ -33,7 +33,7 @@ export const GoalsList: React.FC<GoalsListProps> = props => {
 					})
 				) : (
 					<ListGroup.Item>
-						<span>Цели на проект не определены</span>
+						<span>Задачи на проект не определены</span>
 					</ListGroup.Item>
 				)}
 			</ListGroup>

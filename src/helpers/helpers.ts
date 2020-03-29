@@ -4,6 +4,7 @@ import {
 	Project,
 	ProjectCodes
 } from "../components/projectCards/ProjectCard";
+import { GoalItem } from "../components/goalsList/GoalsList";
 
 export const getMonthAsWord = (month: number): string => {
 	const map = [
@@ -76,5 +77,22 @@ export const nationalProjectsData: Project[] = [
 		title: "Демография",
 		budget: 18,
 		childrens: 5
+	}
+];
+
+export const goalsList: GoalItem[] = [
+	{
+		title:
+			"Провести капитальный ремонт Чувашского государственного театра юного зрителя",
+		success: true
+	},
+	{
+		title: "Построить культурно досуговый центр по ул. Гагарина",
+		success: true
+	},
+	{
+		title:
+			"Произвести закупку свежих литературных, научных изданий в библиотеку им. Николаева",
+		success: false
 	}
 ];
