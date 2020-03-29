@@ -28,18 +28,18 @@ export const Projects: React.FC = props => {
 					<ul>
 						<li className="project__list-element">
 							<a
-								href="http://minec.cap.ru/action/activity/soc-econom-razvitie/regionaljnie-programmi/proektnaya-deyateljnostj/podgotovka-k-realizacii-nacionaljnih-proektov/pasport-nacionaljnogo-proekta-kuljtura/otcheti-regionaljnih-proektov"
-								target="_blank"
-							>
-								{t("Отчеты")}
-							</a>
-						</li>
-						<li className="project__list-element">
-							<a
 								href="http://minec.cap.ru/usercontent/economy/activities//np-kuljtura.pdf"
 								target="_blank"
 							>
 								{t("Паспорт")}
+							</a>
+						</li>
+						<li className="project__list-element">
+							<a
+								href="http://minec.cap.ru/action/activity/soc-econom-razvitie/regionaljnie-programmi/proektnaya-deyateljnostj/podgotovka-k-realizacii-nacionaljnih-proektov/pasport-nacionaljnogo-proekta-kuljtura/otcheti-regionaljnih-proektov"
+								target="_blank"
+							>
+								{t("Отчеты")}
 							</a>
 						</li>
 					</ul>
