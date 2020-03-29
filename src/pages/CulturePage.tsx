@@ -21,20 +21,17 @@ export const CulturePage: React.FC = props => {
 				description="Увеличение посещений организаций культуры, создание условий для творческой реализации граждан, увеличение числа обращений к цифровым ресурсам в сфере культуры."
 				budget={{ reg: 10, fed: 20, other: 2 }}
 			/>
-			<Section secondary>
-				<Container>
+			<Container>
+				<Section secondary>
 					<Projects />
 
 					<Row>
 						<Col md="auto" className="ml-auto">
-							<Deadline
-								dateEnd={new Date()}
-								dateStart={new Date()}
-							/>
+							<Deadline dateEnd={new Date()} dateStart={new Date()} />
 						</Col>
 					</Row>
-				</Container>
-			</Section>
+				</Section>
+			</Container>
 
 			<Section>
 				<Container>
@@ -50,6 +47,12 @@ export const CulturePage: React.FC = props => {
 				<Container>
 					<Row>
 						<Col>
+							<h3
+								style={{ color: "#ffffff" }}
+								className="text-center pt-5 pb-3 text-uppercase"
+							>
+								Новости по проектам
+							</h3>
 							<News
 								news={news}
 								allNewsLink="http://culture.cap.ru/news?type=news&action=bab1af34-684b-4b51-8899-8a8f54b5289d"
@@ -62,6 +65,9 @@ export const CulturePage: React.FC = props => {
 				<Container>
 					<Row>
 						<Col>
+							<h3 className="text-center pt-5 pb-3 text-uppercase">
+								Ваша оценка
+							</h3>
 							<Reactions />
 						</Col>
 					</Row>
