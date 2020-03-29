@@ -14,7 +14,7 @@ export const Map: React.FC<MapProps> = props => {
 	const modalService = useModal();
 	const center = props.data.center;
 	return (
-		<div className="pb-5">
+		<div className="pb-3">
 			<h3 className="text-center pt-5 pb-3 text-uppercase">
 				Объекты национального проекта
 			</h3>

@@ -16,7 +16,7 @@ export type GoalsListProps = {
 export const GoalsList: React.FC<GoalsListProps> = props => {
 	const listGroupProps = {};
 	return (
-		<div className="list">
+		<div className="list pb-5">
 			<div className="list__header">Задачи:</div>
 			<ListGroup>
 				{props.goalsList.length ? (
