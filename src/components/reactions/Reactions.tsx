@@ -6,10 +6,11 @@ import { t } from "../../services/TextService";
 
 toast.configure();
 
-const reactions = ["👍", "😀", "😘", "😍", "😆", "😜"];
+const reactions = ["👍", "😀", "😘", "😍", "😆", "😡"];
 
 export const Reactions = () => {
 	return (
+		<>
 		<div className="reactions d-flex justify-content-center align-content-center">
 			{reactions.map((el, idx) => (
 				<div
@@ -20,5 +21,7 @@ export const Reactions = () => {
 				</div>
 			))}
 		</div>
+			<p className="text-center"><a href="#" onClick={e => e.preventDefault()}>{t("Написать отзыв")}</a></p>
+		</>
 	);
 };

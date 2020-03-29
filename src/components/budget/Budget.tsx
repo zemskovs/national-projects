@@ -17,7 +17,7 @@ export const Budget: React.FC<BudgetProps> = props => {
 			{
 				data: [props.fed || 0, props.reg || 0, props.other || 0],
 				backgroundColor: ["#BFEDFF", "#9FE4FF", "#7FDCFF"],
-				hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+				hoverBackgroundColor: ["#36A2EB", "#36A2EB", "#36A2EB"]
 			}
 		]
 	};

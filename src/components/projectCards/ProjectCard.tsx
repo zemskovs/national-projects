@@ -12,7 +12,7 @@ import "./projectCardStyles.css";
 import { Link } from "react-router-dom";
 
 export enum ProjectCodes {
-	roads = "roads",
+	education = "education",
 	culture = "culture",
 	demos = "demos"
 }
@@ -30,9 +30,9 @@ export type ProjectCardProps = {
 };
 
 const iconProjectsMap = {
-	[ProjectCodes.roads]: require("../../assets/roads.png"),
+	[ProjectCodes.education]: require("../../assets/education.png"),
 	[ProjectCodes.culture]: require("../../assets/culture.png"),
-	[ProjectCodes.demos]: require("../../assets/digital.png")
+	[ProjectCodes.demos]: require("../../assets/demos.png")
 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = props => {

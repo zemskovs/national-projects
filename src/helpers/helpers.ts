@@ -60,21 +60,21 @@ export const events = [
 
 export const nationalProjectsData: Project[] = [
 	{
-		code: ProjectCodes.roads,
-		title: "Безопасные и качественные автомобильные дороги",
-		budget: 400,
-		childrens: 3
+		code: ProjectCodes.education,
+		title: "Образование",
+		budget: 38,
+		childrens: 8
 	},
 	{
 		code: ProjectCodes.culture,
 		title: "Культура",
-		budget: 50.2,
+		budget: 32,
 		childrens: 3
 	},
 	{
 		code: ProjectCodes.demos,
-		title: "Цифровая экономика",
-		budget: 15.5,
+		title: "Демография",
+		budget: 18,
 		childrens: 5
 	}
 ];

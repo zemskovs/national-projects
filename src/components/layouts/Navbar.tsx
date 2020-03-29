@@ -41,7 +41,7 @@ export const Navbar: React.FC = props => {
 					<FontAwesomeIcon icon={faGlasses} />
 				</Nav.Link>
 				<Nav.Link href="#chuv_language">
-					<img src={chuvFlag} height="32" />
+					<img src={chuvFlag} height="32" alt="Чӑвашла куҫар" />
 				</Nav.Link>
 			</NavbarBase>
 		</div>

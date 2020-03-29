@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./projects.css";
 import { Manager } from "../manager/Manager";
+import { t } from "../../services/TextService";
 
 const projects = [
 	{
@@ -10,7 +11,7 @@ const projects = [
 	{ title: "Цифровая культура" }
 ];
 
-const manager = require("../../assets/roza_0.jpg")
+const manager = require("../../assets/roza_0.jpg");
 
 export const Projects: React.FC = props => {
 	return (
@@ -23,13 +24,35 @@ export const Projects: React.FC = props => {
 				/>
 			</div>
 			<div className="d-flex flex-column justify-content-center projects">
+				<div className="projects__main">
+					<ul>
+						<li className="project__list-element">
+							<a
+								href="http://minec.cap.ru/action/activity/soc-econom-razvitie/regionaljnie-programmi/proektnaya-deyateljnostj/podgotovka-k-realizacii-nacionaljnih-proektov/pasport-nacionaljnogo-proekta-kuljtura/otcheti-regionaljnih-proektov"
+								target="_blank"
+							>
+								{t("Отчеты")}
+							</a>
+						</li>
+						<li className="project__list-element">
+							<a
+								href="http://minec.cap.ru/usercontent/economy/activities//np-kuljtura.pdf"
+								target="_blank"
+							>
+								{t("Паспорт")}
+							</a>
+						</li>
+					</ul>
+				</div>
 				<p className="text-center">
 					Чувашия участвует в трех региональных проектах:
 				</p>
 				<div>
 					<ul>
 						{projects.map((p, idx) => (
-							<li key={idx} className="project__list-element">{p.title}</li>
+							<li key={idx} className="project__list-element">
+								{p.title}
+							</li>
 						))}
 					</ul>
 				</div>

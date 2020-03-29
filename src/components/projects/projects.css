@@ -9,3 +9,11 @@
 .project__list-element {
 	cursor: pointer;
 }
+
+.projects__main a{
+	color: #ffffff;
+}
+
+.projects__main a:hover{
+	color: #ffffff;
+}

@@ -10,7 +10,7 @@ export type DateViewProps = {
 export const DateView: React.FC<DateViewProps> = props => {
 	const date = props.date;
 	const month = getMonthAsWord(date.getMonth());
-	const day = date.getDay();
+	const day = date.getDate();
 	const year = date.getFullYear();
 	return (
 		<div className="dateview">
