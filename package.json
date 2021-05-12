@@ -33,7 +33,7 @@
     "react-reactions": "github:casesandberg/react-reactions#pull/3/head",
     "react-router-dom": "^5.1.2",
     "react-toastify": "^5.5.0",
-    "swiper": "^5.3.6"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
